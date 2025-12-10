@@ -1,7 +1,8 @@
 # 🧩 Lab 1 — Splunk Setup
 
-In this lab, I began setting up **Splunk Enterprise** as the central SIEM platform for collecting, analyzing, and correlating security logs in real-time.  
-The goal is to install and configure Splunk on both **Linux (Ubuntu)** and **Windows** systems, then integrate important log sources into the platform.
+In this lab, I began setting up **Splunk Enterprise** as the central SIEM platform for collecting, analyzing, and correlating security logs in real-time. This room will cover installing Splunk on Linux/Windows and configuring different log sources from both OS into Splunk. Each lab covers the following topics:
+
+
 
 ---
 
