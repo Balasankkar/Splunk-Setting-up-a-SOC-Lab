@@ -1,0 +1,34 @@
+# 🧩 Lab 1 — Splunk Setup
+
+In this lab, I began setting up **Splunk Enterprise** as the central SIEM platform for collecting, analyzing, and correlating security logs in real-time.  
+The goal is to install and configure Splunk on both **Linux (Ubuntu)** and **Windows** systems, then integrate important log sources into the platform.
+
+---
+
+## ⚙️ Linux Lab
+
+Tasks:
+- Install **Splunk Enterprise** on the Ubuntu server.  
+- Install and configure the **Splunk Universal Forwarder**.  
+- Collect logs from key sources such as:
+  - `/var/log/syslog`
+  - `/var/log/auth.log`
+  - `/var/log/audit/audit.log`
+- Verify that all Linux logs are being forwarded and indexed properly in Splunk.
+
+---
+
+## 🪟 Windows Lab
+
+Tasks:
+- Install **Splunk Enterprise** on a Windows machine.  
+- Install and configure the **Splunk Universal Forwarder**.  
+- Integrate and monitor:
+  - **Windows Event Logs** (Application, Security, and System)  
+  - **Coffely web logs** (THM’s internal web server logs)
+- Confirm that events are visible and searchable from the Splunk dashboard.
+
+---
+
+![Splunk Setup Overview — TryHackMe SIEM Lab](../images/siemlab/02-splunk-setup-task.png)
+*Figure 1 — Overview of Splunk setup tasks for Linux and Windows environments in the TryHackMe SIEM lab.*
