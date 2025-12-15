@@ -1,8 +1,6 @@
-# 🧩 Lab 1 — Splunk Setup
+# 🧩 Lab 1 — Introduction 
 
-In this lab, I began setting up **Splunk Enterprise** as the central SIEM platform for collecting, analyzing, and correlating security logs in real-time. This room will cover installing Splunk on Linux/Windows and configuring different log sources from both OS into Splunk. Each lab covers the following topics:
-
-
+In this project, I will be setting up **Splunk Enterprise** as the central SIEM platform for collecting, analyzing, and correlating security logs in real-time. This project will cover installing Splunk on Linux/Windows and configuring different log sources from both OS into Splunk. Each lab covers the following topics:
 
 ---
 
@@ -30,6 +28,3 @@ Tasks:
 - Confirm that events are visible and searchable from the Splunk dashboard.
 
 ---
-
-![Splunk Setup Overview — TryHackMe SIEM Lab](../images/siemlab/02-splunk-setup-task.png)
-*Figure 1 — Overview of Splunk setup tasks for Linux and Windows environments in the TryHackMe SIEM lab.*
