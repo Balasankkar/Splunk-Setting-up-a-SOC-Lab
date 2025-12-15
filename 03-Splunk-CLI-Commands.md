@@ -1,7 +1,6 @@
 # 🧩 Lab 3 — Exploring Splunk Through the CLI
 
-After successfully installing and running **Splunk Enterprise** on the Linux server, I explored how to manage and interact with Splunk using its **Command-Line Interface (CLI)**.  
-The CLI allows administrators to perform key operations such as starting, stopping, restarting, and monitoring the Splunk service — as well as executing searches directly from the terminal.
+After successfully installing and running **Splunk Enterprise** on the Linux server, I explored how to manage and interact with Splunk using its **Command-Line Interface (CLI)**. The CLI allows administrators to perform key operations such as starting, stopping, restarting, and monitoring the Splunk service — as well as executing searches directly from the terminal.
 
 ---
 
@@ -18,6 +17,7 @@ cd /opt/splunk/bin
 ```
 
 ## ⚙️ Step 2: Common Splunk CLI Commands
+
 1. Start Splunk
 
 The splunk start command initializes the Splunk service and makes it accessible via the web interface (http://coffely:8000).
@@ -46,6 +46,7 @@ The Splunk web interface is at http://coffely:8000
 
 ```
 
+
 2. Stop Splunk
 
 The splunk stop command stops all running Splunk services safely.
@@ -57,10 +58,22 @@ The splunk stop command stops all running Splunk services safely.
 ```
 This ensures all background Splunk processes are properly terminated.
 
+Figure 1 — Starting and Stopping the Splunk service via CLI.
+
 3. Restart Splunk
 
 Used when changes are made to configuration files or apps.
 It first stops all running processes and then starts them again.
+
+```bash
+./splunk restart
+```
+
+Figure 2 — Using restart command.
+
+
+4. Check Splunk Status
+The splunk status command verifies whether Splunk is running and displays process IDs (PIDs) for active Splunk services.
 
 ```bash
 
@@ -75,6 +88,7 @@ splunkd is running (PID: 2158)
 splunk helpers are running (PIDs: 2159 2301 2351 2437)
 
 ```
+Figure 3 — Using status command
 
 5. Add One-Shot Event
 
@@ -109,24 +123,13 @@ The splunk help command displays all available CLI options and syntax informatio
 This is the most important command for troubleshooting or exploring available functionality.
 
 
-Figure 1 — Starting the Splunk service via CLI.
+Figure 4 — viewing help options from the CLI.
 
-
-Figure 2 — Using stop, restart, and status commands.
-
-
-Figure 3 — Performing searches and viewing help options from the CLI.
-
-✅ Outcome
+## ✅ Outcome
 
 Learned key Splunk CLI commands for managing services and performing searches.
 
 Verified that Splunk can be controlled entirely through the terminal.
 
 Successfully ran test searches and confirmed system operation via CLI.
-
-🔜 Next Step
-
-Proceed to Lab 4: Installing and Configuring the Splunk Universal Forwarder —
-where I’ll deploy a lightweight forwarder on a remote system to send Linux logs to this Splunk instance for centralized monitoring.
 
