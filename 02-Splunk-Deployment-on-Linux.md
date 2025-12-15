@@ -6,8 +6,12 @@ In this task, I deployed **Splunk Enterprise** on the Linux (Ubuntu) server and 
 
 ## ⚙️ Step 1: Splunk Installer Setup
 
-Splunk supports multiple operating systems, but in this lab, the deployment focused on **Ubuntu Linux**. The required installation files — `splunk_installer.tgz` and `splunkforwarder.tgz` — were already downloaded into the lab environment at the following path: `~/Downloads/splunk` 
+Splunk supports multiple operating systems, but in this lab, the deployment focused on **Ubuntu Linux**. The required installation files — `splunk_installer.tgz` and `splunkforwarder.tgz` — were already downloaded into the lab environment at the following path: 
 
+``` bash
+~/Downloads/splunk
+
+```
 
 Before starting the installation, I switched to the root user to ensure sufficient permissions for setup:
 
@@ -15,7 +19,9 @@ Before starting the installation, I switched to the root user to ensure sufficie
 
 To begin the installation, I extracted the Splunk installer package using the following command:
 
+``` bash
 tar xvzf splunk_installer.tgz
+```
 
 This command unpacked the archive and created a new folder named `/splunk`, containing all required binaries and configuration files.
 
@@ -23,15 +29,18 @@ Figure 1 — Splunk installer setup and extraction on Ubuntu server.
 
 Next, I moved the Splunk directory to the `/opt/` directory, which is a standard location for optional software installations on Linux:
 
-`mv splunk /opt/`
+``` bash 
+mv splunk /opt/
+```
 
 ## ⚙️ Step 3: Start Splunk Service
 
 Once installation was complete, I started Splunk for the first time using:
 
+``` bash
 cd /opt/splunk/bin
 ./splunk start --accept-license
-
+```
 During the initial startup, Splunk prompted for the creation of an administrator account, which will be used to access the Splunk Web UI.
 
 I created the following credentials:
