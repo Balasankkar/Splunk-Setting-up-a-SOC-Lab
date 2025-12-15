@@ -1,39 +1,19 @@
 # 🧩 Lab 7 — Event Log Ingestion
 
-In this lab, I completed the configuration of the **Splunk Universal Forwarder** on a Windows endpoint and connected it to the **Splunk Enterprise** instance.  
-After establishing communication, I configured the forwarder to send **Windows Event Logs** (Application, Security, and System) into Splunk for monitoring and analysis.
+In this lab, I completed the configuration of the **Splunk Universal Forwarder** on a Windows endpoint and connected it to the **Splunk Enterprise** instance. After establishing communication, I configured the forwarder to send **Windows Event Logs** (Application, Security, and System) into Splunk for monitoring and analysis.
 
 ---
 
-## ⚙️ Step 1: Verify Forwarder Connection in Splunk
-
-After installing the Universal Forwarder, I navigated to:
-
-Settings → Forwarder Management
-
-yaml
-Copy code
-
-Under **Clients**, my Windows host appeared as active, confirming that it successfully “phoned home” to the deployment server.
-
-**Details:**
-- Host Name: `coffelylab`
-- IP Address: `127.0.0.1`
-- Machine Type: `windows-x64`
-- Status: *Phoned home a few seconds ago*
-
-![Forwarder Management - Connected Client](../images/siemlab/42-forwarder-management.png)
-
----
-
-## ⚙️ Step 2: Add Data from Forwarder
+## ⚙️ Step 1: Add Data from Forwarder
 
 To begin ingesting logs from the Windows machine:
 
 1. Navigate to **Settings → Add Data**
-2. Select the **Forward** option to pull data from the connected Splunk Forwarder.
 
 ![Add Data Menu in Splunk](../images/siemlab/43-add-data-menu.png)
+   
+2. Select the **Forward** option to pull data from the connected Splunk Forwarder.
+
 ![Select Forward Option](../images/siemlab/44-forward-data.png)
 
 ---
@@ -43,15 +23,10 @@ To begin ingesting logs from the Windows machine:
 In the **Select Forwarders** window:
 
 - The available host `WINDOWS coffelylab` appeared.
-- I moved it to **Selected host(s)** and created a **New Server Class Name**:  
-coffely_lab
 
-yaml
-Copy code
+- I moved it to **Selected host(s)** and created a **New Server Class Name**: `coffely_lab`
 
 Then clicked **Next**.
-
-![Select Forwarder Host](../images/siemlab/45-select-forwarder.png)
 
 ---
 
@@ -61,9 +36,6 @@ Next, I configured the source for log collection.
 
 1. Under **Select Source**, I chose:
 Local Event Logs — Collect event logs from this machine.
-
-yaml
-Copy code
 
 2. From the list, I selected the following event logs:
 - **Application**
@@ -80,10 +52,7 @@ These represent the primary Windows event channels used for monitoring user acti
 
 To organize the incoming data, I created a new index:
 
-win_logs
-
-yaml
-Copy code
+`win_logs`
 
 This index will store all incoming events forwarded from the Windows endpoint.
 
@@ -101,7 +70,7 @@ Before finalizing, I reviewed the configuration:
 | Input Type | Windows Event Logs |
 | Event Logs | Application, Security, System |
 | Index | win_logs |
-| Host | coffelylab (Windows) |
+| Host | WINDOWS coffelylab |
 
 Once verified, I clicked **Submit** to activate the data input.
 
@@ -111,8 +80,7 @@ Once verified, I clicked **Submit** to activate the data input.
 
 ## ⚙️ Step 7: Verify Ingestion via Splunk Search
 
-After a few moments, the data began flowing into Splunk.  
-To verify, I ran the following search query:
+After a few moments, the data began flowing into Splunk. To verify, I ran the following search query:
 
 ```spl
 source="WinEventLog:*" index="win_logs"
@@ -121,16 +89,16 @@ source="WinEventLog:*" index="win_logs"
 
 Splunk successfully displayed events from all three logs:
 
-WinEventLog:Security
+- **WinEventLog:Security**
 
-WinEventLog:System
+- **WinEventLog:System**
 
-WinEventLog:Application
+- **WinEventLog:Application**
 
 Over 12,000+ events were indexed within minutes, confirming successful ingestion.
 
 
-✅ Outcome
+## ✅ Outcome
 The Splunk Universal Forwarder successfully connected to the Splunk Enterprise Indexer on port 9997.
 
 Forwarding of Windows Event Logs (Application, Security, and System) was configured and validated.
@@ -139,13 +107,17 @@ The win_logs index was created to store and organize Windows events.
 
 Logs were successfully searchable within Splunk’s Search & Reporting App.
 
-🔍 Key Commands and Ports
-Component	Port	Description
+## 🔍 Key Commands and Ports
+Component	    Port	    Description
+
 Splunk Indexer (Receiver)	9997	Receives forwarded data
+
 Splunk Deployment Server	8089	Manages and deploys configurations
+
 Splunk Web Interface	8000	Administrative GUI access
 
-🔚 Summary
+## 🔚 Summary
+
 This lab demonstrated how to:
 
 Configure Splunk Universal Forwarder on Windows.
@@ -157,7 +129,3 @@ Collect and index Windows Event Logs.
 Verify end-to-end log ingestion.
 
 This forms the backbone of centralized monitoring for Windows systems in a SOC environment.
-Next, I will proceed to Lab 7 — Ingesting Web Logs (Coffely Web Server) to complete the end-to-end SIEM data ingestion pipeline.
-
-arduino
-Copy code
