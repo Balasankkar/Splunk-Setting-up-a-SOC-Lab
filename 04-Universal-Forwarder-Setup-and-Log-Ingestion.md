@@ -98,17 +98,21 @@ Navigate in Splunk Web to:
 
 Settings → Forwarding and receiving → Configure receiving
 
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/d3ee0cfb8a47eb96a0b815134385dc8defbfa73b/Screenshots/Figure40.png)
 
 Then add a new receiving port — the default port is 9997.
 
-
 After saving, port 9997 becomes active and is ready to accept data from forwarders.
+
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/d3ee0cfb8a47eb96a0b815134385dc8defbfa73b/Screenshots/Figure43.png)
 
 ⚙️ Step 2 : Create a Custom Index
 
 Next, I created a dedicated index called Linux_host to store incoming logs.
 
 Path: Settings → Indexes → New Index
+
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/d3ee0cfb8a47eb96a0b815134385dc8defbfa73b/Screenshots/Figure44.png)
 
 Name the new index: Linux_host
 
@@ -141,6 +145,7 @@ For this lab, I chose to monitor syslog and send it to the Linux_host index.
 ```bash
 ./splunk add monitor /var/log/syslog -index Linux_host
 ```
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/d3ee0cfb8a47eb96a0b815134385dc8defbfa73b/Screenshots/Figure45.png)
 
 Result:
 ```bash
