@@ -71,6 +71,7 @@ Windows Event Logs and IIS Web Logs were ingested and indexed.
 Verified both log sources via Splunk Search queries:
 
 index="win_logs"
+
 index="web_logs" sourcetype="iis"
 
 ## 🔚 Summary
