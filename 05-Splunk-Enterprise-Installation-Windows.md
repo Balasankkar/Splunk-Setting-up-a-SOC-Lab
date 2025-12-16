@@ -25,6 +25,8 @@ The installer was obtained from the official Splunk website.
 
 The installer was pre-downloaded into the `Downloads` folder for convenience.
 
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/996fd6245e5ffdd2f2d65d2c18811d9bf6d571e3/Screenshots/Figure1%2CL5.png)
+
 ## ⚙️ Step 3: Run the Splunk Installer
 I launched the `.msi` installer by double-clicking it and accepted the default settings.
 
@@ -40,6 +42,8 @@ Chose to install Splunk Enterprise for all users (Local System account).
 
 Selected the default installation directory.
 
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/996fd6245e5ffdd2f2d65d2c18811d9bf6d571e3/Screenshots/Figure2%2CL5.png)
+
 ## ⚙️ Step 4: Create an Administrator Account
 During setup, I created the Splunk admin user:
 
@@ -49,6 +53,7 @@ Password: ********
 ```
 This account will be used to log into Splunk Web and manage dashboards, data inputs, and searches.
 
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/996fd6245e5ffdd2f2d65d2c18811d9bf6d571e3/Screenshots/Figure3%2CL5.png)
 
 ## ⚙️ Step 5: Installation Progress and Completion
 The installer verified dependencies and installed Splunk Enterprise.
@@ -58,6 +63,7 @@ Once complete, the installer displayed the success message:
 ```bash
 Splunk Enterprise was successfully installed.
 ```
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/996fd6245e5ffdd2f2d65d2c18811d9bf6d571e3/Screenshots/Figure4%2CL5.png)
 
 ## ⚙️ Step 6: Access the Splunk Web Interface
 By default, Splunk Web runs on port 8000.
@@ -66,7 +72,10 @@ To access the instance, I opened a browser and entered:
 ```bash
 http://127.0.0.1:8000
 ```
+
 I then logged in with the previously created administrator credentials:
+
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/996fd6245e5ffdd2f2d65d2c18811d9bf6d571e3/Screenshots/Figure5%2CL5.png)
 
 ## ⚙️ Step 7: Explore the Splunk Dashboard
 
