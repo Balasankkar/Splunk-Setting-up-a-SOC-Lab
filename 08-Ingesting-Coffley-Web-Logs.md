@@ -44,7 +44,7 @@ This automatically applies Microsoft IIS log parsing during ingestion.
 
 Created a new index for web data:
 
-`win_logs`
+`web_logs`
 
 ![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/9e5d23e87dfaa0e018247f8c77d7a8b809c22e66/Screenshots/Figure83.png)
 
