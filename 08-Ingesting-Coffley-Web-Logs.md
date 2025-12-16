@@ -16,9 +16,13 @@ Navigated to:
 
 Settings → Add Data → Forward
 
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/9e5d23e87dfaa0e018247f8c77d7a8b809c22e66/Screenshots/Figure80.png)
+
 Selected Forward data from a Splunk forwarder.
 
 Selected WINDOWS coffelylab as the host and proceeded.
+
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/9e5d23e87dfaa0e018247f8c77d7a8b809c22e66/Screenshots/Figure81.png)
 
 ## ⚙️ Step 3: Configure Source Path
 
@@ -27,6 +31,8 @@ Select Files & Directories as the source input method.
 Specified the IIS log path:
 
 `C:\inetpub\logs\LogFiles\W3SVC2`
+
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/9e5d23e87dfaa0e018247f8c77d7a8b809c22e66/Screenshots/Figure82.png)
 
 ## ⚙️ Step 4: Set Source Type and Index
 
@@ -38,7 +44,9 @@ This automatically applies Microsoft IIS log parsing during ingestion.
 
 Created a new index for web data:
 
-`web_logs`
+`win_logs`
+
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/9e5d23e87dfaa0e018247f8c77d7a8b809c22e66/Screenshots/Figure83.png)
 
 ## ⚙️ Step 5: Verify Web Log Ingestion
 
@@ -53,7 +61,7 @@ Search query:
 Results included HTTP requests, response codes, timestamps, and client IPs — confirming successful ingestion.
 
 
-✅ Outcome
+## ✅ Outcome
 By the end of this lab:
 
 Splunk Universal Forwarder was successfully installed and connected to Splunk Enterprise.
