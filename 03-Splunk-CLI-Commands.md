@@ -58,6 +58,7 @@ The splunk stop command stops all running Splunk services safely.
 ```
 This ensures all background Splunk processes are properly terminated.
 
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/374a8d80d3f4b7658b95daf6e1f7b8f4f39f8204/Screenshots/Figure1%2CL3.png)
 Figure 1 — Starting and Stopping the Splunk service via CLI.
 
 3. Restart Splunk
@@ -68,7 +69,7 @@ It first stops all running processes and then starts them again.
 ```bash
 ./splunk restart
 ```
-
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/374a8d80d3f4b7658b95daf6e1f7b8f4f39f8204/Screenshots/Figure2%2CL3.png)
 Figure 2 — Using restart command.
 
 
@@ -88,6 +89,7 @@ splunkd is running (PID: 2158)
 splunk helpers are running (PIDs: 2159 2301 2351 2437)
 
 ```
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/374a8d80d3f4b7658b95daf6e1f7b8f4f39f8204/Screenshots/Figure3%2CL3.png)
 Figure 3 — Using status command
 
 5. Add One-Shot Event
@@ -122,7 +124,7 @@ The splunk help command displays all available CLI options and syntax informatio
 
 This is the most important command for troubleshooting or exploring available functionality.
 
-
+![Image Alt](https://github.com/Balasankkar/Splunk-Full-SIEM-SOC-Lab/blob/374a8d80d3f4b7658b95daf6e1f7b8f4f39f8204/Screenshots/Figure4%2CL3.png)
 Figure 4 — viewing help options from the CLI.
 
 ## ✅ Outcome
